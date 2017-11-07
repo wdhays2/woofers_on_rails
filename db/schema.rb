@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20171103185053) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "drivers", force: :cascade do |t|
     t.integer "manufacturer_id"
     t.float "size"
