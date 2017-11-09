@@ -1,5 +1,5 @@
 <div class='container-fluid'>
-  <table class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table class="table table-striped table-bordered display drivers" cellspacing="0" width="100%">
     <thead>
       <tr>
         <th>ID</th>
@@ -7,6 +7,7 @@
         <th>Size</th>
         <th>Cut Out</th>
         <th>Model Number</th>
+        <th>Link</th>
         <th>Resistance</th>
         <th>RMS Power</th>
         <th>Sensitivity</th>
@@ -25,25 +26,25 @@
     <tbody>
       <% @drivers.each do |driver| %>
         <tr>
-          <td><%= driver[:id] %></td>
+          <td><%= driver.id %></td>
           <td><%= driver.manufacturer.name %></td>
-          <td><%= driver[:size] %></td>
-          <td><%= driver[:cut_out] %></td>
-          <td><%= driver[:model_no] %></td>
-          <td><%= driver[:link] %></td>
-          <td><%= driver[:resistance] %></td>
-          <td><%= driver[:rms_power] %></td>
-          <td><%= driver[:sensitivity] %></td>
-          <td><%= driver[:x_max] %></td>
-          <td><%= driver[:fs] %></td>
-          <td><%= driver[:vas] %></td>
-          <td><%= driver[:qts] %></td>
-          <td><%= driver[:low_frequency_limit] %></td>
-          <td><%= driver[:high_frequency_limit] %></td>
-          <td><%= driver[:sealed_volume] %></td>
-          <td><%= driver[:sealed_f3] %></td>
-          <td><%= driver[:vented_volume] %></td>
-          <td><%= driver[:vented_f3] %></td>
+          <td><%= driver.size %></td>
+          <td><%= driver.cut_out %></td>
+          <td><%= driver.model_no %></td>
+          <td><%= driver.link %></td>
+          <td><%= driver.resistance %></td>
+          <td><%= driver.rms_power %></td>
+          <td><%= driver.sensitivity %></td>
+          <td><%= driver.x_max %></td>
+          <td><%= driver.fs %></td>
+          <td><%= driver.vas %></td>
+          <td><%= driver.qts %></td>
+          <td><%= driver.low_frequency_limit %></td>
+          <td><%= driver.high_frequency_limit %></td>
+          <td><%= driver.sealed_volume %></td>
+          <td><%= driver.sealed_f3 %></td>
+          <td><%= driver.vented_volume %></td>
+          <td><%= driver.vented_f3 %></td>
         </tr>
       <% end %>
     </tbody>
