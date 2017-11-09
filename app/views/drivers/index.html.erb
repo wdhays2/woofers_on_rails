@@ -1,5 +1,18 @@
 <div class='container-fluid'>
-  <table class="table table-striped table-bordered display drivers" cellspacing="0" width="100%">
+  <h1 align="center">Woofers</h1>
+  <table>
+    <tbody>
+      <tr>
+        <td>Minimum RMS power </td>
+        <td><input type="text" id="min" name="min"></td>
+      </tr>
+      <tr>
+        <td>Maximum RMS power </td>
+        <td><input type="text" id="max" name="max"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table table-striped table-bordered display drivers" id="drivers" cellspacing="0" width="100%">
     <thead>
       <tr>
         <th>ID</th>
@@ -31,7 +44,7 @@
           <td><%= driver.size %></td>
           <td><%= driver.cut_out %></td>
           <td><%= driver.model_no %></td>
-          <td><%= driver.link %></td>
+          <td><%= link_to(driver.link, "https://www.parts-express.com/--#{driver.link}", target: '_blank' ) %></td>
           <td><%= driver.resistance %></td>
           <td><%= driver.rms_power %></td>
           <td><%= driver.sensitivity %></td>
